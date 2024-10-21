@@ -4,15 +4,10 @@ let index = 3;
 
 for (let i = arr.length - 1; i >= 0; i--) {
   if (i >= index) {
-    if (i == index) {
-      arr[index + 1] = newElement;
-      break;
-    }
     arr[i + 1] = arr[i];
+    if (i === index) {
+      arr[index] = newElement;
+    }
   }
 }
 console.log(arr);
-
-
-
-
